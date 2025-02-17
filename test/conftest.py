@@ -1,7 +1,15 @@
+
+import sys
+import os
 import pytest
-from app import app as flask_app
 from pymongo import MongoClient
+
+
+# Add the root directory to sys.path
+sys.path.insert(0, '/Users/olisamuy/Documents/CoreAi/SNotes_app/app')
+
 from config.config import MONGO_URI
+from app import app as flask_app
 
 @pytest.fixture
 def app():
