@@ -211,81 +211,22 @@ Note: Make sure you are in your virtual environment and in the root directory of
 
 # APIs
 
+To access the application use the attached postman collection that has the following APIs:
+
 1. Create a Note
    
-  •	Endpoint: /notes
-
-  •	Method: POST
-
-  •	Description: Allows the user to create a new note.
-
-
-  •	Example Request Body:
-
-
-<img width="196" alt="image" src="https://github.com/user-attachments/assets/324ec813-1264-4bdb-ba85-d35dd2bee68a" />
-
-
 Note: Category can be left empty by the user and the application will suggest a category.
 
-
-
 2. Get All Notes
-   
-  •	Endpoint: /notes/all
-
-  •	Method: GET
-
-  •	Description: Enables the user to retrieve all notes.
-
-
 
 3. Get a Note by ID
    
-  •	Endpoint: /notes/<id>
-
-  •	Method: GET
-
-  •	Description: Enables the user to retrieve a note by its ID.
-
-
-
 4. Update a Note
-   
-  •	Endpoint: /notes/update/<id>
-
-  •	Method: PUT
-
-  •	Description: User can update an existing note.
-
-  •	Request Body:
-
-
-<img width="352" alt="image" src="https://github.com/user-attachments/assets/d7f784e4-ba1a-44c0-8245-38b39aa03fa0" />
-
-
 
 5. Delete a Note
-   
-  •	Endpoint: /notes/remove/<id>
-
-  •	Method: DELETE
-
-  •	Description: User can delete a note by its ID.
-
-
 
 6. Search Notes
    
-  •	Endpoint: /notes/search
-
-  •	Method: GET
-
-  •	Description: User can search for notes based on keywords.
-
-  •	Query Parameters
-
-<img width="523" alt="image" src="https://github.com/user-attachments/assets/eb4366de-bbf5-4d6c-85e4-334f35457094" />
 
 # Testing
 
