@@ -16,6 +16,8 @@ from flask import Flask
 from controllers.note_controller import note_bp
 from pymongo import MongoClient
 from config.config import MONGO_URI
+from bson import ObjectId
+import json
 
 # Initialize the Flask application
 app = Flask(__name__)
@@ -23,6 +25,18 @@ app = Flask(__name__)
 # Set up MongoDB client and database
 client = MongoClient(MONGO_URI)
 app.db = client.get_default_database()
+
+
+# Custom JSON Encoder to handle ObjectId
+class JSONEncoder(json.JSONEncoder):
+    def default(self, obj):
+        if isinstance(obj, ObjectId):
+            return str(obj)
+        return super(JSONEncoder, self).default(obj)
+
+# Use the custom JSON encoder
+app.json_encoder = JSONEncoder
+
 
 # Register the blueprint for note-related routes
 app.register_blueprint(note_bp)
