@@ -27,7 +27,7 @@ def list_notes():
     return get_all_notes()
 
 def note_by_id(note_id):
-    return get_note_by_id()
+    return get_note_by_id(note_id)
 
 def modify_note(note_id, title, content, category):
     sentiment = analyze_sentiment(content)
