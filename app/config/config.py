@@ -6,7 +6,7 @@ from urllib.parse import quote_plus
 username = os.environ.get('MONGO_USER')
 password = os.environ.get('MONGO_PASS')
 host = os.environ.get('MONGO_HOST', 'cluster0.mongodb.net')
-dbname = os.environ.get('MONGO_DBNAME', 'yourdbname')
+dbname = os.environ.get('MONGO_DBNAME', 'SmartNoteAppDb')
 
 # Encode the username and password
 encoded_username = quote_plus(username)
