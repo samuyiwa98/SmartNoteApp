@@ -5,7 +5,8 @@ from urllib.parse import quote_plus
 # Retrieve MongoDB credentials from environment variables
 username = os.environ.get('MONGO_USER')
 password = os.environ.get('MONGO_PASS')
-host = os.environ.get('MONGO_HOST', '@cluster0.blesiqx.mongodb.net')
+host = os.environ.get('MONGO_HOST', 'cluster0-shard-00-00.mongodb.net:27017,cluster0-shard-00-01.mongodb.net:27017,cluster0-shard-00-02.mongodb.net:27017
+')
 dbname = os.environ.get('MONGO_DBNAME', 'SmartNoteAppDb')
 
 # Encode the username and password
