@@ -1,5 +1,5 @@
 # config/config.py
-rom urllib.parse import quote_plus
+from urllib.parse import quote_plus
 
 # Retrieve MongoDB credentials from environment variables
 username = os.environ.get('MONGO_USER')
