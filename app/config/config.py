@@ -1,3 +1,16 @@
 # config/config.py
-MONGO_URI = "mongodb+srv://<olivia.samuyiwa@publicissapient.com>:<S1c1ly98>@cluster0.mongodb.net/<note_db>?retryWrites=true&w=majority"
+rom urllib.parse import quote_plus
+
+# Retrieve MongoDB credentials from environment variables
+username = os.environ.get('MONGO_USER')
+password = os.environ.get('MONGO_PASS')
+host = os.environ.get('MONGO_HOST', 'cluster0.mongodb.net')
+dbname = os.environ.get('MONGO_DBNAME', 'yourdbname')
+
+# Encode the username and password
+encoded_username = quote_plus(username)
+encoded_password = quote_plus(password)
+
+# Construct the MongoDB URI
+MONGO_URI = f"mongodb+srv://{encoded_username}:{encoded_password}@{host}/{dbname}?retryWrites=true&w=majority"
 
