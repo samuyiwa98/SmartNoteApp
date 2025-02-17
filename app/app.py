@@ -43,4 +43,9 @@ app.register_blueprint(note_bp)
 
 if __name__ == '__main__':
     # Run the Flask application in debug mode
-    app.run(debug=True)
+    # Retrieve the port number from the environment variable 'PORT'
+    # Default to 5000 if 'PORT' is not set
+    port = int(os.environ.get('PORT', 5000))
+    
+    # Run the Flask application, binding to all network interfaces
+    app.run(host='0.0.0.0', port=port, debug=True)
