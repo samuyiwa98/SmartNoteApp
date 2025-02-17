@@ -254,7 +254,7 @@ Note: Category can be left empty by the user and the application will suggest a 
 
 6. Error Handling: Implement more robust error handling in your Flask application to provide informative error messages for common issues.
 
-7. Comprehensive Testing: Add more test cases to cover edge cases and additional features. As well as including automated tests for your API endpoints to ensure they work as expected and handle edge cases.
+7. Automated Testing: Include automated tests for your API endpoints to ensure they work as expected and handle edge cases.
 
 8. Continuous Integration: Integrate the tests into a CI/CD pipeline to ensure that they are run automatically on code changes.
 
