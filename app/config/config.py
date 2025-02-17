@@ -1,4 +1,5 @@
 # config/config.py
+import os
 from urllib.parse import quote_plus
 
 # Retrieve MongoDB credentials from environment variables
