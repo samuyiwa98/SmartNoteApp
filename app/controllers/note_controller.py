@@ -1,3 +1,20 @@
+
+"""
+The note_controller module is responsible for handling HTTP requests related to note operations in the application.
+It defines a set of RESTful API endpoints for creating, retrieving, updating, and deleting notes, as well as searching for notes based on keywords.
+This module uses Flask's Blueprint to organize routes related to note management, promoting modularity and separation of concerns.
+
+Key Responsibilities:
+- **Add Note**: Provides an endpoint to create a new note with a title, content, and category. It returns the ID of the newly created note.
+- **Get All Notes**: Offers an endpoint to retrieve all existing notes, returning them in JSON format.
+- **Update Note**: Allows updating an existing note's title, content, and category by its ID. It returns the count of modified documents.
+- **Delete Note**: Facilitates the deletion of a note by its ID, returning the count of deleted documents.
+- **Search Notes**: Enables searching for notes based on a keyword, returning a list of matching notes.
+
+The module interacts with the service layer to perform CRUD operations and utilizes utility functions for additional features like category suggestion.
+Error handling is implemented to manage invalid input formats, ensuring robust API behavior.
+"""
+
 from flask import Blueprint, request, jsonify
 from bson import ObjectId
 from service.note_service import create_note, list_notes, note_by_id, modify_note, remove_note, find_notes
