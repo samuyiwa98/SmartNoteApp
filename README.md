@@ -315,11 +315,11 @@ Running the tests:
 
 3. Execute the Test Suite: Run the entire test suite using pytest. This command will automatically discover and execute all test files in the tests directory.
 
-	pytest tests/
+	pytest test/
 
 4. Generate a Coverage Report: To ensure comprehensive test coverage, you can generate a coverage report using pytest-cov.
 
-	pytest --cov=your_module tests/
+	pytest --cov=your_module test/
 
 Replace your_module with the name of the module you want to measure coverage for.
 
