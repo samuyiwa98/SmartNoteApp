@@ -18,6 +18,7 @@ from pymongo import MongoClient
 from config.config import MONGO_URI
 from bson import ObjectId
 import json
+import os
 
 # Initialize the Flask application
 app = Flask(__name__)
