@@ -14,7 +14,7 @@ import joblib
 import os
 
 # Define the path to the model file
-MODEL_PATH = os.path.join(os.path.dirname(__file__), 'utils', 'ml', 'note_categorizer.pkl')
+MODEL_PATH = os.environ.get('MODEL_FILE_PATH', '/opt/render/project/src/app/utils/ml/note_categorizer.pkl')
 
 def load_model():
     """
