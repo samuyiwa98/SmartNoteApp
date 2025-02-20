@@ -14,7 +14,7 @@ import joblib
 import os
 
 # Define the path to the model file
-MODEL_PATH = os.path.join('ml', 'note_categorizer.pkl')
+MODEL_PATH = os.path.join(os.path.dirname(__file__),'ml', 'note_categorizer.pkl')
 
 def load_model():
     """
@@ -52,7 +52,11 @@ def suggest_category(content):
         str: The suggested category, or 'Unknown' if the model is not loaded.
     """
     if model:
-        return model.predict([content])[0]
+        try:
+            return model.predict([content])[0]
+        except Exception as e:
+            print(f"Prediction error: {e}")
+            return 'Unknown'
     else:
         return 'Unknown'
 
